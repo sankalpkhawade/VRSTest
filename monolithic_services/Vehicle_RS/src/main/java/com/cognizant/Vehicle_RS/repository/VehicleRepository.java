@@ -9,5 +9,5 @@ import com.cognizant.Vehicle_RS.model.Vehicle;
 
 public interface VehicleRepository extends CrudRepository<Vehicle, Integer> {
 	
-
+	public Vehicle findByVehiclenumber(String number);
 }

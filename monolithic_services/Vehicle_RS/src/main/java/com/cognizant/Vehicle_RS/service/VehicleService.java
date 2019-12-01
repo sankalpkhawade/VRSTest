@@ -40,11 +40,14 @@ public class VehicleService {
 
 	}
 
-	
-
 	public void modifyVehicle(Vehicle vehicle) {
-			vehicleRepository.save(vehicle);
-		
+		vehicleRepository.save(vehicle);
+
+	}
+
+	public Vehicle findByVehiclenumber(String string) {
+
+		return vehicleRepository.findByVehiclenumber(string);
 	}
 
 }

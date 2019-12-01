@@ -51,17 +51,31 @@ public class Vehicle {
 
 	@Column(name = "vh_service_due_date")
 	private Date service_due_date;
-	@Column(name="vh_status")
+	@Column(name = "vh_status")
 	private boolean status;
-	
-	@OneToOne(mappedBy="vehicle")
+
+	@OneToOne(mappedBy = "vehicle")
 	private Booking booking;
 
-	
-	
-//	public Booking getBooking() {
-//		return booking;
-//	}
+	// public Booking getBooking() {
+	// return booking;
+	// }
+
+	public Vehicle(int id, String name, String image, String vehicle_no, String seater, double price, boolean active,
+			String branch, Date insurance_exp_date, Date last_service_date, Date service_due_date) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.image = image;
+		this.vehicle_no = vehicle_no;
+		this.seater = seater;
+		this.price = price;
+		this.active = active;
+		this.branch = branch;
+		this.insurance_exp_date = insurance_exp_date;
+		this.last_service_date = last_service_date;
+		this.service_due_date = service_due_date;
+	}
 
 	public void setBooking(Booking booking) {
 		this.booking = booking;
