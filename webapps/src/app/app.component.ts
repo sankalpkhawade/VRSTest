@@ -18,11 +18,9 @@ export class AppComponent implements OnInit {
   }
   ngOnInit(): void {
     this.loggedIn();
-    this.router.navigate(['search-bar']);
+    this.router.navigate([''])
   }
   
-  
-
   loggedIn():boolean {
     if(!this.authService.loggedInUser.loggedOut){
       this.isLoggedIn = true;
@@ -37,7 +35,6 @@ export class AppComponent implements OnInit {
     this.vehicleService.clickedOnAdd = false;
     this.vehicleService.addedToBookings = false;
   }
-
 
 
 }

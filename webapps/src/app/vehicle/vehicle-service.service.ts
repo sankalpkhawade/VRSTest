@@ -27,8 +27,6 @@ export class VehicleServiceService {
     }
     )
    }
-
-
   
   getVehicleItems():vehicleItem[]
   {
@@ -41,8 +39,6 @@ export class VehicleServiceService {
   getSubject():Subject<vehicleItem[]> {
     return this.subject;
   }
- 
-
 
   removeFromBookings(vehicleItemId:number){
     this.vehicleListService.deleteBookingsItem(vehicleItemId).subscribe(data=>{

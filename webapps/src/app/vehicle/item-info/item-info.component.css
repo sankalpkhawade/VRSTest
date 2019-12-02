@@ -69,7 +69,7 @@
 }
 
 .input-group-text.green {
-	background-color: #3b5684;
+	background-color: #801912;
 	border: 0px;
 }
 
@@ -77,14 +77,14 @@
 	display: block;
 }
 
-.navbar-bg {
+/* .navbar-bg {
 	background: linear-gradient(to right, #373b44, #4286f4);
-}
+} */
 
 .btn.btn-blue, .btn.btn-blue:hover, .btn.btn-blue:active, .btn.btn-blue:link
 	{
-	background-color: #263139;
-	border-color: #263139;
+	background-color: #801912;
+	border-color: #801912;
 	color: #ffffff;
 }
 .btn.btn-green, .btn.btn-green:hover, .btn.btn-green:active, .btn.btn-green:link

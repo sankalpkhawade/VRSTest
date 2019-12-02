@@ -57,9 +57,6 @@ export class AuthServiceService {
           this.vehicleService.isLoggedIn = true;
           this.setToken(data.token);
           this.vehicleListService.userName=user.username;
-          console.log(data.token);
-          console.log(data);
-  
           this.router.navigate(['search-bar']);
 
         }
@@ -84,8 +81,7 @@ export class AuthServiceService {
     this.vehicleService.isLoggedIn = false;
     this.vehicleService.clickedOnAdd = false;
     this.vehicleService.addedToBookings = false;
-    this.router.navigate(['login']);
-    // this.router.navigate(['search-bar']);
+    this.router.navigate(['']);
   }
 
 

@@ -17,6 +17,7 @@ import { ItemEditComponent } from './vehicle/item-edit/item-edit.component';
 import { AddVehicleComponent } from './vehicle/add-vehicle/add-vehicle.component';
 import { VehicleComponent } from './vehicle/vehicleList/vehicleList.component';
 import { BookingsComponent } from './booking/bookings/bookings.component';
+import { PaymentComponent } from './booking/payment/payment.component';
 
 
 
@@ -33,6 +34,7 @@ import { BookingsComponent } from './booking/bookings/bookings.component';
     NotfoundComponent,
     AddVehicleComponent,
     ApprovalComponent,
+    PaymentComponent,
   ],
   imports: [
     BrowserModule,

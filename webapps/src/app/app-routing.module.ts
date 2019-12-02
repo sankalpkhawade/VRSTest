@@ -9,6 +9,7 @@ import { ItemEditComponent } from './vehicle/item-edit/item-edit.component';
 import { SearchComponent } from './vehicle/search/search.component';
 import { BookingsComponent } from './booking/bookings/bookings.component';
 import { AddVehicleComponent } from './vehicle/add-vehicle/add-vehicle.component';
+import { PaymentComponent } from './booking/payment/payment.component';
 
 const routes: Routes = [
   {path:"item-edit/:id" , component:ItemEditComponent , canActivate: [AuthGaurdService]},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:"login" , component:LoginComponent},
   {path:"search-bar" , component:SearchComponent},
   {path:"approval" , component:ApprovalComponent},
+  {path:"payment" , component:PaymentComponent},
   {path:"**" , component:NotfoundComponent}
 
 ];

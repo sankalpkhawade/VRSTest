@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Booking } from '../booking';
 import { BookingsServiceService } from '../bookings-service.service';
 import { VehicleServiceService } from 'src/app/vehicle/vehicle-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-bookings',
@@ -13,8 +14,7 @@ export class BookingsComponent implements OnInit {
   bookings:Booking;
   
   
-  constructor(private bookingsService:BookingsServiceService,private vehicleService:VehicleServiceService) {
-
+  constructor(private bookingsService:BookingsServiceService,private vehicleService:VehicleServiceService,private router:Router) {
    
    }
 
@@ -24,9 +24,8 @@ export class BookingsComponent implements OnInit {
     this.bookingsService.getAllBookings();
   }
 
-
-    
-
-  
+  payment(){
+    this.router.navigate(['payment']);
+  } 
 
 }
