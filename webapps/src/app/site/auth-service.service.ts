@@ -27,7 +27,7 @@ export class AuthServiceService {
     let credentials = btoa(user+':'+password);
     let headers = new HttpHeaders();
     headers = headers.set('Authorization', 'Basic '+credentials)
-    return this.httpClient.get(`${environment.baseUrl}`+"authenticate", {headers})
+    return this.httpClient.get(`${environment.baseUrl}`+"/authentication-service/authenticate/", {headers})
   }
   public setToken(token: string) {
     this.vehicleListService.setToken(token);
@@ -81,7 +81,7 @@ export class AuthServiceService {
     this.vehicleService.isLoggedIn = false;
     this.vehicleService.clickedOnAdd = false;
     this.vehicleService.addedToBookings = false;
-    this.router.navigate(['']);
+    this.router.navigate(['search-bar/']);
   }
 
 

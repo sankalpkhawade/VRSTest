@@ -12,14 +12,12 @@ export class UserServiceService {
   userExists:boolean=true;
   user:User;
 
-
-
   constructor(private router:Router,private httpClient:HttpClient) { }
 
 
   addUsers(user:User):Observable<any>{
 
-    return this.httpClient.post<User>(`${environment.baseUrl}`+'users',user);
+    return this.httpClient.post<User>(`${environment.baseUrl}`+'/authentication-service/users',user);
 
    }
 

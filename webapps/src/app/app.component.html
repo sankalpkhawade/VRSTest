@@ -10,9 +10,7 @@
         <div class="collapse navbar-collapse ml-3 mr-2" id="collapsibleNavbar">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active"><a  class="nav-link"
-                    *ngIf="!loggedIn()"  routerLink=""><i class="material-icons lg-20">home</i></a></li>
-                <li class="nav-item active"><a (click)="clickOnAddBookings()" class="nav-link"
-                      *ngIf="loggedIn()" routerLink="search-bar/">Vehicle</a></li>
+                       routerLink="search-bar/">Vehicle</a></li>
                 <li class="nav-item  active " *ngIf="this.vehicleService.isAdmin"><a class="nav-link"
                         routerLink="approval/">Approve Users</a></li>
                 <li class="nav-item  active " *ngIf="loggedIn() && !this.vehicleService.isAdmin"><a class="nav-link"
@@ -31,17 +29,16 @@
                 </li>
 
                 <li class="nav-item active " *ngIf="loggedIn()" (click)="this.authService.logout()"><a class="nav-link"
-                        routerLink="search-bar/"><i class="material-icons lg-15">exit_to_app</i></a></li>
+                        routerLink=""><i class="material-icons lg-15">exit_to_app</i></a></li>
             </ul>
 
         </div>
     </nav>
 </div>
 
-
 <router-outlet></router-outlet>
 
 <footer>
-    <nav class="navbar navbar-expand-md navbar-dark navbar-bg text-light fixed-bottom">Copyright
-        2019</nav>
+    <nav class="navbar navbar-expand-md navbar-dark navbar-bg text-light fixed-bottom">Copyright &#169;
+        2019 <span class="mx-auto md-31"><h5>TRAVEL WORLD WITH US</h5></span></nav>
 </footer>

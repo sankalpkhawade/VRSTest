@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   }
   ngOnInit(): void {
     this.loggedIn();
-    this.router.navigate([''])
+    this.router.navigate(['search-bar/'])
   }
   
   loggedIn():boolean {

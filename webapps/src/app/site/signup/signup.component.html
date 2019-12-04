@@ -16,7 +16,7 @@
           <div class="row ml-2 mr-2 header">
             <div class="col-lg-6 col-md-6 heading">
               <div>
-                <label for="username">Username</label>
+                <label for="username">Username*</label>
               </div>
               <input class="form-control" type="text" id="username" formControlName="username" [formControl]="username"
                 placeholder="Enter Username">
@@ -29,7 +29,7 @@
 
             <div class="col-lg-6 col-md-6 heading">
               <div>
-                <label for="branch">Branch Code</label>
+                <label for="branch">Branch Code*</label>
               </div>
               <input class="form-control" type="text" id="branch" formControlName="branch" [formControl]="branch"
                 placeholder="Enter Branch Code">
@@ -44,7 +44,7 @@
           <div class="row ml-2 mr-2 header">
             <div class="col-lg-6 col-md-6 heading">
               <div>
-                <label for="firstname">First Name</label>
+                <label for="firstname">First Name*</label>
               </div>
               <input class="form-control" type="text" id="firstname" formControlName="firstname"
                 [formControl]="firstname" placeholder="Enter First Name">
@@ -54,7 +54,7 @@
             </div>
             <div class="col-lg-6 col-md-6 heading">
               <div>
-                <label for="lastname">Last Name</label>
+                <label for="lastname">Last Name*</label>
               </div>
               <input class="form-control" type="text" id="lastname" formControlName="lastname" [formControl]="lastname"
                 placeholder="Enter Last Name">
@@ -65,7 +65,7 @@
           <div class="row ml-2 mr-2 header">
             <div class="col-lg-6 col-md-6 heading">
               <div>
-                <label for="age">Age</label>
+                <label for="age">Age*</label>
               </div>
               <input class="form-control" type="number" id="age" formControlName="age" [formControl]="age"
                 placeholder="Enter Age">
@@ -74,12 +74,12 @@
             </div>
             <div class="col-lg-6 col-md-6 heading">
               <div>
-                <label for="gender">Gender</label>
+                <label for="gender">Gender*</label>
               </div>
               <div class="form-check">
                 <input type="radio" class=" form-check-input md-15 " id="male" value="Male" formControlName="gender"
                   [formControl]="gender">&nbsp;
-                <label for="male"> Male </label> &nbsp;&nbsp;
+                <label for="male"> Male</label> &nbsp;&nbsp;
                 <input type="radio" class=" form-check-input md-15 ml-1" id="female" value="Female"
                   formControlName="gender" [formControl]="gender">
                 <label for="female" class="ml-4">Female</label>
@@ -90,7 +90,7 @@
           <div class="row ml-2 mr-2 header">
             <div class="col-lg-6 col-md-6 heading">
               <div>
-                <label for="contact">Contact Number</label>
+                <label for="contact">Contact Number*</label>
               </div>
               <input class="form-control" type="number" id="contact" formControlName="contact" [formControl]="contact"
                 placeholder="Enter Contact Number">
@@ -103,11 +103,11 @@
             </div>
             <div class="col-lg-6 col-md-6 heading">
               <div>
-                <label for="email">Email Id</label>
+                <label for="email">Email Id*</label>
               </div>
               <input class="form-control" type="text" id="email" formControlName="email" [formControl]="email"
                 placeholder="Enter Email Id">
-              <div class="invalid" *ngIf="email.invalid && email.errors.required && email.touched">Email is required
+              <div class="invalid" *ngIf="email.invalid && email.errors.required  && email.touched">Email is required
               </div>
 
             </div>
@@ -115,7 +115,7 @@
           <div class="row ml-2 mr-2 header">
             <div class="col-lg-6 col-md-6 heading">
               <div>
-                <label for="password">Password</label>
+                <label for="password">Password*</label>
               </div>
               <input class="form-control" type="password" id="password" formControlName="password"
                 [formControl]="password" placeholder="Enter Password">
@@ -125,13 +125,13 @@
             </div>
             <div class="col-lg-6 col-md-6 heading">
               <div>
-                <label for="conPassword">Confirm Password</label>
+                <label for="conPassword">Confirm Password*</label>
               </div>
               <input class="form-control" type="password" id="conPassword" formControlName="ConPassword"
                 [formControl]="ConPassword" placeholder="Confirm Password">
               <div class="invalid" *ngIf="ConPassword.invalid && ConPassword.errors.required && ConPassword.touched">
                 Enter
-                Confiirm Password</div>
+                Confiirm Password*</div>
               <div class="invalid" *ngIf="signupForm.get('ConPassword').hasError('nomatch')">Password and Confirm
                 Password
                 do not match</div>

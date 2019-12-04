@@ -11,37 +11,35 @@ import { Booking } from '../booking/booking';
 })
 export class VehicleServiceService {
 
-  private subject= new Subject<vehicleItem[]>();
-  isAdmin:boolean=false;
-  addedToBookings:boolean = false;
-  bookingsAddedId:number;
-  isLoggedIn:boolean = false;
-  clickedOnAdd:boolean = false;
+  private subject = new Subject<vehicleItem[]>();
+  isAdmin: boolean = false;
+  addedToBookings: boolean = false;
+  bookingsAddedId: number;
+  isLoggedIn: boolean = false;
+  clickedOnAdd: boolean = false;
 
-  
-  vehicleItem:vehicleItem[]
 
-  constructor(private bookingsService:BookingsServiceService,private router:Router,private vehicleListService:VehicleListService) {
-    this.vehicleListService.getAllVehicle().subscribe((data:vehicleItem[])=>{
-      this.vehicleItem=data;
+  vehicleItem: vehicleItem[]
+
+  constructor(private bookingsService: BookingsServiceService, private router: Router, private vehicleListService: VehicleListService) {
+    this.vehicleListService.getAllVehicle().subscribe((data: vehicleItem[]) => {
+      this.vehicleItem = data;
     }
     )
-   }
-  
-  getVehicleItems():vehicleItem[]
-  {
+  }
+
+  getVehicleItems(): vehicleItem[] {
     return this.vehicleItem;
   }
-  getAllVehicleItem():vehicleItem[]
-  {
+  getAllVehicleItem(): vehicleItem[] {
     return this.vehicleItem;
   }
-  getSubject():Subject<vehicleItem[]> {
+  getSubject(): Subject<vehicleItem[]> {
     return this.subject;
   }
 
-  removeFromBookings(vehicleItemId:number){
-    this.vehicleListService.deleteBookingsItem(vehicleItemId).subscribe(data=>{
+  removeFromBookings(vehicleItemId: number) {
+    this.vehicleListService.deleteBookingsItem(vehicleItemId).subscribe(data => {
       this.bookingsService.getAllBookings();
     })
   }

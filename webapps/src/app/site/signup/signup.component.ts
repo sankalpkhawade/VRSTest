@@ -22,7 +22,7 @@ export class SignupComponent implements OnInit {
       age:["",[Validators.required,Validators.min(18)]],
       gender:["",[Validators.required]],
       contact:["",[Validators.required,Validators.min(1000000000),Validators.max(9999999999)]],
-      email:["",[Validators.required]],
+      email:["",[Validators.required,Validators.email]],
       password:["",[Validators.required,Validators.minLength(6)]],
       ConPassword:["",[Validators.required,Validators.minLength(6),this.matchConfirmPassword.bind(this)]],
       branch:["",[Validators.required,Validators.maxLength(5)]]
